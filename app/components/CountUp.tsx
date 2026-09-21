@@ -9,12 +9,14 @@ export default function CountUp({
   prefix = "",
   duration = 1.6,
   separator = true,
+  pad = 0,
 }: {
   value: number;
   suffix?: string;
   prefix?: string;
   duration?: number;
   separator?: boolean;
+  pad?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-10% 0px" });
@@ -38,7 +40,9 @@ export default function CountUp({
   return (
     <span ref={ref}>
       {prefix}
-      {separator ? display.toLocaleString("en-IN") : display}
+      {separator
+        ? display.toLocaleString("en-IN")
+        : String(display).padStart(pad, "0")}
       {suffix}
     </span>
   );

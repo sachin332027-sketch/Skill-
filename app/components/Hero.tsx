@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import IntelligenceNetwork from "./IntelligenceNetwork";
 
@@ -16,76 +17,107 @@ const line: Variants = {
 };
 
 export default function Hero() {
-  const words = ["Technology.", "Intelligence.", "Impact."];
+  const words = ["Innovating the landscape", "with data & tech oriented"];
 
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] w-full items-end overflow-hidden pb-20 pt-40"
+      className="relative flex min-h-[100svh] w-full items-center overflow-hidden pb-16 pt-32"
     >
       <div className="absolute inset-0">
         <IntelligenceNetwork />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg" />
-        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_20%,rgba(76,125,255,0.10),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_75%_35%,rgba(242,121,58,0.10),transparent_70%)]" />
       </div>
 
-      <div className="container-px relative z-10 w-full">
-        <div className="mb-8 flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
-          <span className="mono-tag text-text-secondary">
-            Strategy × Technology × Data × AI × Governance
-          </span>
-        </div>
+      <div className="container-px relative z-10 grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <div className="mb-8 flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
+            <span className="mono-tag text-text-secondary">
+              Strategy × Technology × Data × AI × Governance
+            </span>
+          </div>
 
-        <h1 className="font-display max-w-5xl text-[13vw] font-extrabold leading-[0.98] tracking-tight text-text-primary sm:text-[9vw] md:text-[6.4vw] lg:text-[88px] xl:text-[96px]">
-          {words.map((w, i) => (
-            <span key={w} className="block overflow-hidden">
+          <h1 className="font-display max-w-2xl text-[11vw] font-extrabold leading-[1.03] tracking-tight text-text-primary sm:text-[7vw] md:text-[4.6vw] lg:text-[56px] xl:text-[62px]">
+            {words.map((w, i) => (
+              <span key={w} className="block overflow-hidden">
+                <motion.span
+                  custom={i}
+                  initial="hidden"
+                  animate="visible"
+                  variants={line}
+                  className="block"
+                >
+                  {w}
+                </motion.span>
+              </span>
+            ))}
+            <span className="block overflow-hidden">
               <motion.span
-                custom={i}
+                custom={2}
                 initial="hidden"
                 animate="visible"
                 variants={line}
-                className="block"
+                className="block text-accent"
               >
-                {w}
+                humanistic solutions.
               </motion.span>
             </span>
-          ))}
-        </h1>
+          </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.75, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 max-w-lg text-lg leading-relaxed text-text-secondary md:text-xl"
-        >
-          Building technology and strategic intelligence for the people,
-          institutions and leaders shaping India.
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-8 max-w-lg text-lg leading-relaxed text-text-secondary md:text-xl"
+          >
+            Leaders in leveraging people-centric tech &amp; data capabilities
+            for the governance and political domain — trusted by India&apos;s
+            largest political party and government institutions.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="#capabilities"
+              data-cursor="VIEW"
+              className="group inline-flex items-center gap-2 rounded-full bg-text-primary px-6 py-3.5 text-sm font-semibold text-bg transition-transform hover:scale-[1.02]"
+            >
+              Explore Capabilities
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+            <a
+              href="#contact"
+              data-cursor="OPEN"
+              className="inline-flex items-center gap-2 rounded-full border border-line-strong px-6 py-3.5 text-sm font-semibold text-text-primary transition-colors hover:border-accent hover:bg-accent-soft"
+            >
+              Get In Touch ↗
+            </a>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.95, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          className="relative hidden items-center justify-center lg:col-span-5 lg:flex"
         >
-          <a
-            href="#capabilities"
-            data-cursor="VIEW"
-            className="group inline-flex items-center gap-2 rounded-full bg-text-primary px-6 py-3.5 text-sm font-semibold text-bg transition-transform hover:scale-[1.02]"
-          >
-            Explore Capabilities
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-          <a
-            href="#contact"
-            data-cursor="OPEN"
-            className="inline-flex items-center gap-2 rounded-full border border-line-strong px-6 py-3.5 text-sm font-semibold text-text-primary transition-colors hover:border-accent hover:bg-accent-soft"
-          >
-            Start a Conversation ↗
-          </a>
+          <div className="absolute h-72 w-72 rounded-full bg-accent/10 blur-[90px]" />
+          <Image
+            src="/images/hero-emblem.png"
+            alt="Jarvis — the world, engineered into strategic intelligence"
+            width={500}
+            height={470}
+            priority
+            className="relative w-full max-w-sm drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]"
+          />
         </motion.div>
       </div>
 

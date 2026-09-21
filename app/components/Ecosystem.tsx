@@ -35,16 +35,17 @@ export default function Ecosystem() {
   }, []);
 
   return (
-    <section className="relative bg-bg py-28 md:py-36">
+    <section id="ecosystem" className="relative bg-bg py-28 md:py-36">
       <div className="container-px">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="mono-tag text-accent-cyan">Ecosystem</span>
+          <span className="mono-tag text-accent-cyan">Products &amp; Ecosystem</span>
           <h2 className="font-display mt-4 text-4xl font-bold text-text-primary md:text-5xl">
-            One system. Every capability.
+            One system. 44 products.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-text-secondary">
             Jarvis Technology operates as a connected intelligence ecosystem
-            — not a set of disconnected services.
+            of 44 thoroughly designed, technology-driven products — not a
+            set of disconnected services.
           </p>
         </div>
 

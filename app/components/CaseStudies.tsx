@@ -1,39 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
+import JarvisMark from "./icons/JarvisMark";
 
 const CASES = [
   {
     category: "Political Intelligence",
-    title: "State Election War Room",
+    title: "Data-Driven Campaign War Rooms",
     challenge:
-      "Fragmented voter data across 200+ constituencies with no unified intelligence layer.",
+      "India's largest political party needed a unified way to connect with voters and target messaging at grassroots scale.",
     approach:
-      "Built a real-time signal-fusion system merging survey, social and field data.",
-    tech: "Custom ML models, live dashboards, field app network",
-    impact: "40M+ data points processed across a single election cycle.",
+      "Built data-driven solutions for internal work management, voter connect and message targeting across constituencies.",
+    tech: "Custom dashboards, field data pipelines, big-data processing",
+    impact: "252 campaigns executed so far — mega and fractional, at the grass-root level.",
     hue: "from-[#1a2244] to-[#0d1226]",
   },
   {
-    category: "Governance & Policy",
-    title: "Public Service Delivery Platform",
+    category: "Governance & Public Policy",
+    title: "Government Unit Technology Solutions",
     challenge:
-      "Citizen grievance redressal was slow, opaque and impossible to measure.",
+      "Various government units needed a leading, data-driven provider to stay ahead of an evolving governance landscape.",
     approach:
-      "Designed a governance intelligence platform tracking delivery in real time.",
-    tech: "Workflow automation, GIS mapping, predictive escalation",
-    impact: "60% reduction in average resolution time.",
+      "Deployed people-centric tech and data capabilities purpose-built for the governance and political domain.",
+    tech: "Governance platforms, analytics, workflow automation",
+    impact: "02 general elections and 18 assembly elections supported to date.",
     hue: "from-[#12292b] to-[#0a1618]",
   },
   {
-    category: "Digital Transformation",
-    title: "National Field Operations Network",
+    category: "Data & Technology",
+    title: "44 Technology-Driven Products",
     challenge:
-      "No standardised way to coordinate thousands of on-ground volunteers.",
+      "The party's dynamic development and massive structure demanded products that keep it competitive as challenges evolve.",
     approach:
-      "Engineered a mobile-first field operations OS with offline-first sync.",
-    tech: "React Native, edge sync, geo-fenced task routing",
-    impact: "280+ team members coordinated across every state.",
+      "Designed and shipped a thoroughly thought-out product suite, backed by 160 Bn dynamic data attributes managed.",
+    tech: "Big data infrastructure, product engineering, analytics",
+    impact: "44 products maintaining a durable competitive edge, 7 years running.",
     hue: "from-[#2a1e12] to-[#160d08]",
   },
 ];
@@ -69,8 +70,9 @@ export default function CaseStudies() {
                   <div className="absolute -bottom-10 -left-10 h-56 w-56 rounded-full bg-accent/20 blur-3xl" />
                   <div className="absolute -top-10 -right-10 h-56 w-56 rounded-full bg-accent-cyan/10 blur-3xl" />
                 </div>
-                <span className="mono-tag relative text-accent-cyan">
-                  {c.category}
+                <span className="relative flex items-center gap-2 text-accent-cyan">
+                  <JarvisMark className="h-4 w-4" />
+                  <span className="mono-tag">{c.category}</span>
                 </span>
                 <div className="relative flex items-end justify-between">
                   <h3 className="font-display max-w-xs text-2xl font-bold text-text-primary md:text-3xl">

@@ -2,6 +2,16 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  IconRadar,
+  IconChip,
+  IconBars,
+  IconTarget,
+  IconInstitution,
+  IconBroadcast,
+  IconNetworkPin,
+  IconLayers,
+} from "./icons/CapabilityIcons";
 
 const CAPABILITIES = [
   {
@@ -9,48 +19,56 @@ const CAPABILITIES = [
     title: "Political Intelligence",
     desc: "Real-time signal tracking, sentiment mapping and strategic risk assessment across the political landscape.",
     tags: ["Signal Intelligence", "Risk Mapping", "Sentiment"],
+    Icon: IconRadar,
   },
   {
     n: "02",
     title: "Technology & AI",
     desc: "Custom AI systems, machine learning pipelines and platforms engineered for scale and speed.",
     tags: ["Machine Learning", "Platforms", "Automation"],
+    Icon: IconChip,
   },
   {
     n: "03",
     title: "Data & Analytics",
     desc: "Turning billions of fragmented data points into clear, decision-ready intelligence.",
     tags: ["Big Data", "Modelling", "Dashboards"],
+    Icon: IconBars,
   },
   {
     n: "04",
     title: "Campaign Strategy",
     desc: "End-to-end strategic architecture for national and state-level campaigns.",
     tags: ["Positioning", "Narrative", "War Room"],
+    Icon: IconTarget,
   },
   {
     n: "05",
     title: "Governance & Public Policy",
     desc: "Evidence-based policy design and implementation frameworks for institutions.",
     tags: ["Policy Design", "Institutions", "Delivery"],
+    Icon: IconInstitution,
   },
   {
     n: "06",
     title: "Strategic Communications",
     desc: "Message architecture and multi-channel communication built on data, not instinct.",
     tags: ["Narrative", "Media", "Messaging"],
+    Icon: IconBroadcast,
   },
   {
     n: "07",
     title: "Field Operations",
     desc: "On-ground execution networks spanning constituencies, districts and states.",
     tags: ["Ground Networks", "Logistics", "Execution"],
+    Icon: IconNetworkPin,
   },
   {
     n: "08",
     title: "Digital Transformation",
     desc: "Modernising institutional technology stacks for a data-first future.",
     tags: ["Platforms", "Infrastructure", "Scale"],
+    Icon: IconLayers,
   },
 ];
 
@@ -90,6 +108,11 @@ export default function Capabilities() {
                 >
                   {c.n}
                 </span>
+                <c.Icon
+                  className={`h-5 w-5 shrink-0 transition-colors ${
+                    active === i ? "text-accent" : "text-text-tertiary"
+                  }`}
+                />
                 <span
                   className={`font-display flex-1 text-2xl font-semibold transition-all duration-300 md:text-3xl ${
                     active === i
@@ -123,9 +146,17 @@ export default function Capabilities() {
                 className="flex w-full flex-col justify-between"
               >
                 <div>
-                  <span className="font-display text-8xl font-extrabold text-line-strong">
-                    {CAPABILITIES[active].n}
-                  </span>
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-8xl font-extrabold text-line-strong">
+                      {CAPABILITIES[active].n}
+                    </span>
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-line-strong bg-bg text-accent">
+                      {(() => {
+                        const ActiveIcon = CAPABILITIES[active].Icon;
+                        return <ActiveIcon className="h-7 w-7" />;
+                      })()}
+                    </div>
+                  </div>
                   <h3 className="font-display mt-6 text-3xl font-bold text-text-primary">
                     {CAPABILITIES[active].title}
                   </h3>

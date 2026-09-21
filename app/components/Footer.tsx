@@ -1,9 +1,12 @@
+import Logo from "./icons/Logo";
+
 const LINKS = [
   { label: "Capabilities", href: "#capabilities" },
+  { label: "Products", href: "#ecosystem" },
   { label: "Insights", href: "#insights" },
   { label: "About", href: "#about" },
   { label: "Careers", href: "#careers" },
-  { label: "Contact", href: "#contact" },
+  { label: "Get In Touch", href: "#contact" },
 ];
 
 const SOCIAL = [
@@ -17,8 +20,11 @@ export default function Footer() {
     <footer className="relative border-t border-line bg-bg py-14">
       <div className="container-px flex flex-col gap-10">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
-          <span className="font-display text-lg font-extrabold tracking-[0.28em] text-text-primary">
-            JARVIS
+          <span className="flex items-center gap-2 text-text-primary">
+            <Logo className="h-5 w-5 text-accent" />
+            <span className="font-display text-lg font-extrabold tracking-[0.28em]">
+              JARVIS
+            </span>
           </span>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-3">
@@ -51,7 +57,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Jarvis Technology & Strategy
             Consulting. All rights reserved.
           </span>
-          <span>Delhi · Mumbai · Bengaluru</span>
+          <span>India</span>
         </div>
       </div>
     </footer>

@@ -4,12 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const REGIONS = [
-  { key: "north", label: "North", x: 175, y: 90, stat: "Delhi NCR", detail: "Policy & governance engagements" },
-  { key: "west", label: "West", x: 110, y: 220, stat: "Mumbai · Ahmedabad", detail: "Technology & data operations hub" },
-  { key: "central", label: "Central", x: 190, y: 210, stat: "Bhopal", detail: "Field operations coordination" },
-  { key: "east", label: "East", x: 260, y: 200, stat: "Kolkata · Patna", detail: "Campaign strategy & analytics" },
-  { key: "south", label: "South", x: 175, y: 360, stat: "Bengaluru · Chennai", detail: "AI & platform engineering" },
-  { key: "northeast", label: "Northeast", x: 300, y: 140, stat: "Guwahati", detail: "Regional intelligence network" },
+  { key: "north", label: "North", x: 175, y: 90, stat: "General & assembly elections", detail: "Policy & governance engagements with government units" },
+  { key: "west", label: "West", x: 110, y: 220, stat: "160 Bn data attributes", detail: "Technology and big-data operations" },
+  { key: "central", label: "Central", x: 190, y: 210, stat: "Grass-root campaigns", detail: "Field operations and voter connect" },
+  { key: "east", label: "East", x: 260, y: 200, stat: "252 campaigns", detail: "Campaign strategy & analytics" },
+  { key: "south", label: "South", x: 175, y: 360, stat: "44 tech products", detail: "AI & platform engineering" },
+  { key: "northeast", label: "Northeast", x: 300, y: 140, stat: "Regional outreach", detail: "Community mobilisation network" },
 ];
 
 // Stylised, abstracted contour — not a literal or political map.

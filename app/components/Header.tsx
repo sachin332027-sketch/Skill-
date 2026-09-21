@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Logo from "./icons/Logo";
 
 const LINKS = [
   { label: "Capabilities", href: "#capabilities" },
+  { label: "Products", href: "#ecosystem" },
   { label: "Insights", href: "#insights" },
-  { label: "Impact", href: "#impact" },
   { label: "About", href: "#about" },
   { label: "Careers", href: "#careers" },
 ];
@@ -41,9 +42,12 @@ export default function Header() {
         <a
           href="#top"
           data-cursor=""
-          className="font-display text-sm font-extrabold tracking-[0.28em] text-text-primary"
+          className="flex items-center gap-2 text-text-primary"
         >
-          JARVIS
+          <Logo className="h-6 w-6 text-accent" />
+          <span className="font-display text-sm font-extrabold tracking-[0.28em]">
+            JARVIS
+          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -63,7 +67,7 @@ export default function Header() {
           data-cursor="OPEN"
           className="group hidden items-center gap-1.5 rounded-full border border-line-strong px-4 py-2 text-[13px] font-medium text-text-primary transition-colors hover:border-accent hover:bg-accent-soft md:inline-flex"
         >
-          Let&apos;s Talk
+          Get In Touch
           <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
             ↗
           </span>
@@ -101,7 +105,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full border border-line-strong px-4 py-2 text-sm text-text-primary"
             >
-              Let&apos;s Talk ↗
+              Get In Touch ↗
             </a>
           </nav>
         </div>

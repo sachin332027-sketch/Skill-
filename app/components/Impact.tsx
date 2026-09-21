@@ -11,7 +11,7 @@ const STEPS = [
   {
     n: "02",
     title: "Analyze",
-    desc: "Billions of data points are structured into patterns, signals and strategic implications.",
+    desc: "160 Bn dynamic data attributes are structured into patterns, signals and strategic implications.",
   },
   {
     n: "03",
